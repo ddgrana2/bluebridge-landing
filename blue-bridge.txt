@@ -1,0 +1,22 @@
+blue-bridge/
+├── public/
+│   ├── index.html
+│   └── assets/
+│       └── images/
+├── src/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Footer/
+│   │   ├── Hero/
+│   │   └── common/
+│   ├── pages/
+│   │   ├── Home/
+│   │   ├── About/
+│   │   ├── Insights/
+│   │   └── Contact/
+│   ├── styles/
+│   │   └── global.css
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md

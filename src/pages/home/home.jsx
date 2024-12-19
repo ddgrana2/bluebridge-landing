@@ -71,10 +71,10 @@ function Home() {
         </Container>
       </Box>
 
-      {/* Sección de Partners con nuevo degradado */}
+      {/* Sección de Partners con fondo blanco */}
       <Box sx={{ 
         py: 10, 
-        background: 'linear-gradient(180deg, #FFFFFF 0%, rgba(11, 61, 145, 0.9) 100%)',
+        bgcolor: 'white',
         color: '#0B3D91'
       }}>
         <Container maxWidth="lg">
@@ -149,7 +149,7 @@ function Home() {
                         variant="body2"
                         sx={{
                           color: '#0B3D91',
-                          opacity: 0.9
+                          opacity: 0.8
                         }}
                       >
                         {partner.description}

@@ -7,22 +7,22 @@ function Home() {
   const partners = [
     {
       name: "Siemens Energy",
-      logo: "./images/siemens.png",
+      logo: "/images/siemens.png",
       description: "Leading supplier of energy technology"
     },
     {
       name: "E.ON",
-      logo: "./images/eon.png",
+      logo: "/images/eon.png",
       description: "One of Europe's largest operators of energy networks"
     },
     {
       name: "RWE",
-      logo: "./images/rwe.png",
+      logo: "/images/rwe.png",
       description: "Germany's largest electricity producer"
     },
     {
       name: "EnBW",
-      logo: "./images/enbw.png",
+      logo: "/images/enbw.png",
       description: "Major player in renewable energy"
     }
   ];
@@ -71,11 +71,11 @@ function Home() {
         </Container>
       </Box>
 
-      {/* Sección de Partners con degradado */}
+      {/* Sección de Partners con nuevo degradado */}
       <Box sx={{ 
         py: 10, 
-        background: 'linear-gradient(180deg, #1E88E5 0%, #0B3D91 100%)',
-        color: 'white'
+        background: 'linear-gradient(180deg, #FFFFFF 0%, rgba(11, 61, 145, 0.9) 100%)',
+        color: '#0B3D91'
       }}>
         <Container maxWidth="lg">
           <motion.div
@@ -90,7 +90,7 @@ function Home() {
                 fontSize: { xs: '2rem', md: '2.5rem' },
                 fontWeight: 600,
                 mb: 6,
-                color: 'white'
+                color: '#0B3D91'
               }}
             >
               Our Industry Partners
@@ -131,7 +131,7 @@ function Home() {
                             maxWidth: '80%',
                             maxHeight: '80px',
                             objectFit: 'contain',
-                            filter: 'brightness(0) invert(1)'
+                            filter: 'none'
                           }}
                         />
                       </Box>
@@ -140,7 +140,7 @@ function Home() {
                         sx={{
                           fontWeight: 600,
                           mb: 1,
-                          color: 'white'
+                          color: '#0B3D91'
                         }}
                       >
                         {partner.name}
@@ -148,7 +148,8 @@ function Home() {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: 'rgba(255, 255, 255, 0.9)'
+                          color: '#0B3D91',
+                          opacity: 0.9
                         }}
                       >
                         {partner.description}

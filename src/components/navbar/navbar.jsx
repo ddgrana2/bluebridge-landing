@@ -18,7 +18,7 @@ function Navbar() {
   const menuItems = [
     { text: 'Home', path: '/' },
     { text: 'About', path: '/about' },
-    { text: 'Our Services', path: '/services' },
+    { text: 'Our Offering', path: '/offering' },
     { text: 'Contact', path: '/contact' }
   ];
 

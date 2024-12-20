@@ -80,55 +80,63 @@ function Home() {
               component="h2" 
               textAlign="center"
               sx={{ 
-                fontSize: { xs: '1.5rem', md: '2rem' },
+                fontSize: { xs: '1.15rem', md: '1.54rem' },
                 fontWeight: 400,
                 color: '#FFFFFF',
                 maxWidth: '700px',
                 mx: 'auto',
-                mb: 8
+                mb: 8,
+                position: 'relative',
+                zIndex: 2
               }}
             >
               We bridge the gap between international workforce and companies worldwide.
             </Typography>
 
-            {/* Worker Selection Form */}
+            {/* Asegurarse que todo el contenido esté sobre el degradado */}
             <Box sx={{ 
-              maxWidth: 600, 
-              mx: 'auto', 
-              p: 4, 
-              bgcolor: 'white',
-              borderRadius: 2,
-              boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+              position: 'relative',
+              zIndex: 2
             }}>
-              <Typography variant="h6" gutterBottom>
-                Worker Type *
-              </Typography>
-              <Select
-                fullWidth
-                defaultValue=""
-                sx={{ mb: 2 }}
-              >
-                <MenuItem value="">Select worker type</MenuItem>
-                <MenuItem value="electrician">Electrician</MenuItem>
-                <MenuItem value="plumbing">Plumbing, heating and air conditioning technology</MenuItem>
-                <MenuItem value="construction">Construction Worker</MenuItem>
-                <MenuItem value="mechanic">Mechanic</MenuItem>
-                <MenuItem value="plumber">Plumber</MenuItem>
-                <MenuItem value="carpenter">Carpenter</MenuItem>
-              </Select>
-              <Button 
-                variant="contained" 
-                fullWidth
-                sx={{ 
-                  mt: 2,
-                  bgcolor: '#0B3D91',
-                  '&:hover': {
-                    bgcolor: '#092d6e'
-                  }
-                }}
-              >
-                Next
-              </Button>
+              {/* Worker Selection Form */}
+              <Box sx={{ 
+                maxWidth: 600, 
+                mx: 'auto', 
+                p: 4, 
+                bgcolor: 'white',
+                borderRadius: 2,
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+              }}>
+                <Typography variant="h6" gutterBottom>
+                  Worker Type *
+                </Typography>
+                <Select
+                  fullWidth
+                  defaultValue=""
+                  sx={{ mb: 2 }}
+                >
+                  <MenuItem value="">Select worker type</MenuItem>
+                  <MenuItem value="electrician">Electrician</MenuItem>
+                  <MenuItem value="plumbing">Plumbing, heating and air conditioning technology</MenuItem>
+                  <MenuItem value="construction">Construction Worker</MenuItem>
+                  <MenuItem value="mechanic">Mechanic</MenuItem>
+                  <MenuItem value="plumber">Plumber</MenuItem>
+                  <MenuItem value="carpenter">Carpenter</MenuItem>
+                </Select>
+                <Button 
+                  variant="contained" 
+                  fullWidth
+                  sx={{ 
+                    mt: 2,
+                    bgcolor: '#0B3D91',
+                    '&:hover': {
+                      bgcolor: '#092d6e'
+                    }
+                  }}
+                >
+                  Next
+                </Button>
+              </Box>
             </Box>
           </motion.div>
         </Container>

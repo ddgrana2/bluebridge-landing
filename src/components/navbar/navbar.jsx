@@ -117,11 +117,11 @@ function Navbar() {
       {/* Sección de degradado */}
       <Box 
         sx={{ 
-          height: '270px',
+          height: '315px',
           width: '100%',
           background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
           position: 'absolute',
-          zIndex: 1
+          zIndex: -1
         }}
       />
     </>

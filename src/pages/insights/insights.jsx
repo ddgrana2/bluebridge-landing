@@ -60,7 +60,8 @@ function Insights() {
         bgcolor: 'white',
         position: 'relative',
         zIndex: 2,
-        width: '100%'
+        width: '100%',
+        mt: { xs: 4, sm: 6 }
       }}>
         <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
           <Grid container spacing={4}>

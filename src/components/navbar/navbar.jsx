@@ -46,8 +46,16 @@ function Navbar() {
               src="/images/logo.png"
               alt="BlueBridge Logo"
               sx={{
-                height: { xs: '35px', sm: '40px' },
-                width: 'auto'
+                height: { 
+                  xs: '140px',  // Volvemos al tamaño original
+                  sm: '196.875px' 
+                },
+                width: 'auto',
+                objectFit: 'contain',
+                position: 'absolute',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                left: { xs: '20px', sm: '40px' }
               }}
             />
           </Link>

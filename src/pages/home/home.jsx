@@ -26,17 +26,18 @@ function Home() {
 
   return (
     <Box sx={{ 
-      bgcolor: 'white', 
       position: 'relative',
-      zIndex: 2,
-      minHeight: '100vh'
+      minHeight: '100vh',
+      bgcolor: 'transparent'
     }}>
       <PageGradient />
       
       {/* Hero Section */}
       <Box sx={{ 
-        py: { xs: 6, sm: 8 },
-        px: { xs: 2, sm: 3, md: 4 }
+        py: { xs: 4, sm: 6, md: 8 },
+        px: { xs: 2, sm: 3, md: 4 },
+        position: 'relative',
+        zIndex: 2
       }}>
         <Container maxWidth="lg">
           <motion.div
@@ -141,7 +142,12 @@ function Home() {
       </Box>
 
       {/* Built by experts section */}
-      <Box sx={{ py: 8, bgcolor: '#f5f5f5' }}>
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        mt: 8
+      }}>
         <Container maxWidth="lg">
           <Typography 
             variant="h2" 
@@ -170,7 +176,12 @@ function Home() {
       </Box>
 
       {/* Testimonials section */}
-      <Box sx={{ py: 8, bgcolor: '#f5f5f5' }}>
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        mt: 8
+      }}>
         <Container maxWidth="lg">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

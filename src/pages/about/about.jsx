@@ -8,57 +8,34 @@ function About() {
   return (
     <Box sx={{ 
       position: 'relative',
-      minHeight: '100vh'
+      minHeight: '100vh',
+      pt: { xs: 2, sm: 3 }
     }}>
       <PageGradient />
-      <Box sx={{ py: { xs: 6, sm: 8 } }}>
-        <Container maxWidth="lg">
-          <PageTitle>About Us</PageTitle>
-          <HeroSection />
-          <MissionVisionSection />
-          <CTASection />
-        </Container>
-      </Box>
-    </Box>
-  );
-}
-
-function HeroSection() {
-  return (
-    <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
-          component="h1" 
-          sx={{ 
-            fontSize: { xs: '2.46rem', md: '3.45rem' },
-            fontWeight: 700,
-            textAlign: 'center',
-            color: '#1618FF'
-          }}
-        >
-          About Us
-        </Typography>
+        <PageTitle>About Us</PageTitle>
         <Box 
           sx={{ 
             maxWidth: { xs: '90%', md: '800px' }, 
             mx: 'auto', 
             textAlign: 'center',
-            '& h1, & p': {
-              whiteSpace: 'normal',
-              overflowWrap: 'break-word',
-              wordWrap: 'break-word',
-              minWidth: { xs: '200px', md: '500px' },
-              maxWidth: '90%',
-              display: 'inline-block'
-            }
+            mt: 4
           }}
         >
-          <Typography variant="h5" color="text.secondary" sx={{ mt: 2 }}>
+          <Typography 
+            variant="h5" 
+            color="text.secondary" 
+            sx={{ 
+              fontSize: { xs: '1.1rem', sm: '1.25rem' },
+              lineHeight: 1.6
+            }}
+          >
             BlueBridge is far more than a traditional recruiting firm. We provide comprehensive, 
             scalable solutions that go beyond simply placing talent.
           </Typography>
         </Box>
+        <MissionVisionSection />
+        <CTASection />
       </Container>
     </Box>
   );

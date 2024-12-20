@@ -24,7 +24,24 @@ function Home() {
   ];
 
   return (
-    <Box sx={{ bgcolor: 'white', position: 'relative', zIndex: 2 }}>
+    <Box sx={{ 
+      bgcolor: 'white', 
+      position: 'relative',
+      zIndex: 2 
+    }}>
+      {/* Degradado */}
+      <Box 
+        sx={{ 
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '225px',
+          background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
+          zIndex: -1
+        }}
+      />
+
       {/* Hero Section */}
       <Box sx={{ py: 8 }}>
         <Container maxWidth="lg">

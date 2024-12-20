@@ -45,7 +45,7 @@ function Navbar() {
             top: '50%',
             transform: 'translateY(-50%)',
             left: '40px',
-            height: '504px',
+            height: '420px',
             zIndex: 3,
             display: 'flex',
             alignItems: 'center'
@@ -55,7 +55,7 @@ function Navbar() {
                 src="images/logo.png"
                 alt="BlueBridge Logo"
                 style={{ 
-                  height: '283.5px',
+                  height: '236.25px',
                   width: 'auto',
                   objectFit: 'contain',
                   background: 'transparent'

@@ -6,15 +6,15 @@ function Home() {
   return (
     <PageLayout
       title={
-        <Box sx={{ 
-          textAlign: 'center',
-          width: '100%',
-          px: { xs: 2, sm: 3, md: 4 }
-        }}>
+        <Box sx={{ textAlign: 'center' }}>
           <Typography 
             component="span"
             sx={{ 
-              fontSize: { xs: '2rem', sm: '2.46rem', md: '3.45rem' },
+              fontSize: { 
+                xs: 'calc(2rem * 1.2)',
+                sm: 'calc(2.46rem * 1.2)',
+                md: 'calc(3.45rem * 1.2)'
+              },
               fontWeight: 700,
               color: '#1618FF',
               display: 'inline'
@@ -25,7 +25,11 @@ function Home() {
           <Typography 
             component="span"
             sx={{ 
-              fontSize: { xs: '2rem', sm: '2.46rem', md: '3.45rem' },
+              fontSize: { 
+                xs: 'calc(2rem * 1.2)',
+                sm: 'calc(2.46rem * 1.2)',
+                md: 'calc(3.45rem * 1.2)'
+              },
               fontWeight: 700,
               color: '#FFFFFF',
               display: 'inline'
@@ -35,7 +39,12 @@ function Home() {
           </Typography>
         </Box>
       }
-      subtitle="We bridge the gap between international workforce and\ncompanies worldwide."
+      subtitle={
+        <>
+          We bridge the gap between international workforce and<br />
+          companies worldwide.
+        </>
+      }
     >
       <Container 
         maxWidth={false} 

@@ -82,8 +82,8 @@ function Home() {
               sx={{ 
                 fontSize: { xs: '1.5rem', md: '2rem' },
                 fontWeight: 400,
-                color: '#666',
-                maxWidth: '800px',
+                color: '#FFFFFF',
+                maxWidth: '700px',
                 mx: 'auto',
                 mb: 8
               }}

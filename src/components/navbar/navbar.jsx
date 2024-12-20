@@ -43,8 +43,8 @@ function Navbar() {
           <Box sx={{ 
             position: 'absolute',
             top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            transform: 'translateY(-50%)',
+            left: '40px',
             height: '350px',
             zIndex: 3,
             display: 'flex',
@@ -117,7 +117,7 @@ function Navbar() {
       {/* Sección de degradado */}
       <Box 
         sx={{ 
-          height: '225px',
+          height: '270px',
           width: '100%',
           background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
           position: 'absolute',

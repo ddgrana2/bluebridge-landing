@@ -1,19 +1,24 @@
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PageGradient from '../../components/common/PageGradient';
+import PageTitle from '../../components/common/PageTitle';
 
 function About() {
   return (
-    <Box 
-      className="flex flex-col min-h-screen"
-      sx={{
-        mt: '2.5rem',
-        pt: '1.5rem',
-      }}
-    >
-      <HeroSection />
-      <MissionVisionSection />
-      <CTASection />
+    <Box sx={{ 
+      position: 'relative',
+      minHeight: '100vh'
+    }}>
+      <PageGradient />
+      <Box sx={{ py: { xs: 6, sm: 8 } }}>
+        <Container maxWidth="lg">
+          <PageTitle>About Us</PageTitle>
+          <HeroSection />
+          <MissionVisionSection />
+          <CTASection />
+        </Container>
+      </Box>
     </Box>
   );
 }

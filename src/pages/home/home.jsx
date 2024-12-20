@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Grid, Rating, Select, MenuItem, Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import PageGradient from '../../components/common/PageGradient';
 
 function Home() {
   const testimonials = [
@@ -27,23 +28,16 @@ function Home() {
     <Box sx={{ 
       bgcolor: 'white', 
       position: 'relative',
-      zIndex: 2 
+      zIndex: 2,
+      minHeight: '100vh'
     }}>
-      {/* Degradado */}
-      <Box 
-        sx={{ 
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '225px',
-          background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
-          zIndex: -1
-        }}
-      />
-
+      <PageGradient />
+      
       {/* Hero Section */}
-      <Box sx={{ py: 8 }}>
+      <Box sx={{ 
+        py: { xs: 6, sm: 8 },
+        px: { xs: 2, sm: 3, md: 4 }
+      }}>
         <Container maxWidth="lg">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -1,3 +1,7 @@
+import { Box, Container, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import PageLayout from '../../components/layout/PageLayout';
+
 function Offering() {
   return (
     <PageLayout
@@ -37,7 +41,15 @@ function Offering() {
       }
       subtitle="Discover valuable resources and insights about working in Europe."
     >
-      {/* ... resto del contenido igual ... */}
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        width: '100%',
+        mt: { xs: 4, sm: 6 }
+      }}>
+        <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }} />
+      </Box>
     </PageLayout>
   );
 }

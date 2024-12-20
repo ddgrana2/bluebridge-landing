@@ -40,7 +40,7 @@ function Navbar() {
             top: '50%',
             transform: 'translateY(-50%)',
             left: '20px',
-            height: '80px',
+            height: '240px',
             zIndex: 2,
             display: 'flex',
             alignItems: 'center'
@@ -50,7 +50,7 @@ function Navbar() {
                 src="images/logo.png"
                 alt="BlueBridge Logo"
                 style={{ 
-                  height: '45px',
+                  height: '135px',
                   width: 'auto',
                   objectFit: 'contain',
                   background: 'transparent'
@@ -96,7 +96,7 @@ function Navbar() {
       {/* Sección de degradado */}
       <Box 
         sx={{ 
-          height: '150px', // 3 veces la altura del toolbar (50px * 3)
+          height: '225px',
           width: '100%',
           background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
           position: 'relative',

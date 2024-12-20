@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import PageGradient from '../common/PageGradient';
 
@@ -7,14 +7,16 @@ function PageLayout({ children, title, subtitle }) {
     <Box sx={{ 
       position: 'relative',
       minHeight: '100vh',
-      bgcolor: 'transparent'
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column'
     }}>
       <PageGradient />
       
       {/* Hero Section */}
       <Box sx={{ 
-        py: { xs: 4, sm: 6, md: 8 },
-        px: { xs: 2, sm: 3, md: 4 },
+        pt: { xs: 6, sm: 8, md: 10 },
+        pb: { xs: 4, sm: 6 },
         position: 'relative',
         zIndex: 2
       }}>
@@ -32,9 +34,10 @@ function PageLayout({ children, title, subtitle }) {
                 sx={{ 
                   maxWidth: '800px',
                   mx: 'auto',
-                  mb: 8,
+                  mt: 3,
                   color: '#FFFFFF',
-                  lineHeight: 1.6
+                  lineHeight: 1.6,
+                  fontSize: { xs: '1.1rem', sm: '1.25rem' }
                 }}
               >
                 {subtitle}
@@ -46,11 +49,12 @@ function PageLayout({ children, title, subtitle }) {
 
       {/* Content Section */}
       <Box sx={{ 
+        flex: 1,
+        width: '100%',
         bgcolor: 'white',
         position: 'relative',
         zIndex: 2,
-        py: 8,
-        width: '100%'
+        mt: { xs: 2, sm: 4 }
       }}>
         {children}
       </Box>

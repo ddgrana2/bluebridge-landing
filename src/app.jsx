@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import { Box } from '@mui/material';
 import theme from './styles/theme';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/footer';
 import Home from './pages/home/home';
-import About from './pages/about/about';
-import Insights from './pages/insights/insights';
-import Contact from './pages/contact/contact';
+import About from './pages/about/About';
+import Offering from './pages/offering/Offering';
+import Contact from './pages/contact/Contact';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/insights" element={<Insights />} />
+              <Route path="/offering" element={<Offering />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Box>

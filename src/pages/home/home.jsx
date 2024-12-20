@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Rating } from '@mui/material';
+import { Box, Container, Typography, Grid, Rating, Select, MenuItem, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 
 function Home() {
@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <Box sx={{ bgcolor: 'white' }}>
-      {/* Sección de encabezado */}
+      {/* Hero Section */}
       <Box sx={{ py: 8 }}>
         <Container maxWidth="lg">
           <motion.div
@@ -63,11 +63,80 @@ function Home() {
             >
               We bridge the gap between international workforce and companies worldwide.
             </Typography>
+
+            {/* Worker Selection Form */}
+            <Box sx={{ 
+              maxWidth: 600, 
+              mx: 'auto', 
+              p: 4, 
+              bgcolor: 'white',
+              borderRadius: 2,
+              boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+            }}>
+              <Typography variant="h6" gutterBottom>
+                Worker Type *
+              </Typography>
+              <Select
+                fullWidth
+                defaultValue=""
+                sx={{ mb: 2 }}
+              >
+                <MenuItem value="">Select worker type</MenuItem>
+                <MenuItem value="electrician">Electrician</MenuItem>
+                <MenuItem value="plumbing">Plumbing, heating and air conditioning technology</MenuItem>
+                <MenuItem value="construction">Construction Worker</MenuItem>
+                <MenuItem value="mechanic">Mechanic</MenuItem>
+                <MenuItem value="plumber">Plumber</MenuItem>
+                <MenuItem value="carpenter">Carpenter</MenuItem>
+              </Select>
+              <Button 
+                variant="contained" 
+                fullWidth
+                sx={{ 
+                  mt: 2,
+                  bgcolor: '#0B3D91',
+                  '&:hover': {
+                    bgcolor: '#092d6e'
+                  }
+                }}
+              >
+                Next
+              </Button>
+            </Box>
           </motion.div>
         </Container>
       </Box>
 
-      {/* Sección de testimonios */}
+      {/* Built by experts section */}
+      <Box sx={{ py: 8, bgcolor: '#f5f5f5' }}>
+        <Container maxWidth="lg">
+          <Typography 
+            variant="h2" 
+            textAlign="center"
+            sx={{ mb: 6 }}
+          >
+            Built by experts from
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+            {['McKinsey', 'JP Morgan', 'UBS', 'Bain', 'Rappi', 'BCG', 'Enpal', 'Barclays'].map((company) => (
+              <Grid item xs={6} sm={3} md={2} key={company}>
+                <Typography 
+                  variant="h6" 
+                  textAlign="center"
+                  sx={{ 
+                    color: '#666',
+                    fontWeight: 500
+                  }}
+                >
+                  {company}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* Testimonials section */}
       <Box sx={{ py: 8, bgcolor: '#f5f5f5' }}>
         <Container maxWidth="lg">
           <motion.div

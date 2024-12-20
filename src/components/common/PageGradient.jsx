@@ -9,7 +9,7 @@ function PageGradient() {
       sx={{ 
         height: { xs: '450px', sm: '378px' },
         width: '100%',
-        background: `linear-gradient(180deg, ${theme.custom.gradient.primary.start} 0%, ${theme.custom.gradient.primary.end} 100%)`,
+        background: 'linear-gradient(180deg, #4B4DFF 0%, #FFFFFF 100%)',
         position: 'absolute',
         top: '65px',
         left: 0,

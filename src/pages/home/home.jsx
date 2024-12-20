@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Rating, Select, MenuItem, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import PageLayout from '../../components/layout/PageLayout';
 
@@ -46,18 +46,15 @@ function Home() {
         </>
       }
     >
-      <Container 
-        maxWidth={false} 
-        sx={{ 
-          width: '100%',
-          py: { xs: 4, sm: 6, md: 8 },
-          px: { xs: 2, sm: 3, md: 4 }
-        }}
-      >
-        {/* Worker Selection Form */}
-        {/* Built by experts section */}
-        {/* Testimonials section */}
-      </Container>
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        width: '100%',
+        mt: { xs: 4, sm: 6 }
+      }}>
+        <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }} />
+      </Box>
     </PageLayout>
   );
 }

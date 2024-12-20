@@ -56,7 +56,7 @@ function Home() {
                 sx={{ 
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
                   fontWeight: 700,
-                  color: '#0B3D91',
+                  color: '#1618FF',
                   display: 'inline'
                 }}
               >

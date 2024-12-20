@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
 const NavButton = styled(Button)(({ theme, active }) => ({
-  margin: '0 8px',
-  padding: '8px 12px',
-  fontSize: '1.1rem',
+  margin: '0 4px',
+  padding: '8px 8px',
+  fontSize: '0.92rem',
   color: '#FFFFFF',
   fontWeight: 500,
   textTransform: 'capitalize',
@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <>
       <AppBar position="static" sx={{ 
-        bgcolor: '#1621F2',
+        bgcolor: '#1618FF',
         boxShadow: 0,
         marginBottom: 0,
         height: '65px',
@@ -43,9 +43,9 @@ function Navbar() {
           <Box sx={{ 
             position: 'absolute',
             top: '50%',
-            transform: 'translateY(-50%)',
-            left: '40px',
-            height: '420px',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            height: '350px',
             zIndex: 3,
             display: 'flex',
             alignItems: 'center'
@@ -55,7 +55,7 @@ function Navbar() {
                 src="images/logo.png"
                 alt="BlueBridge Logo"
                 style={{ 
-                  height: '236.25px',
+                  height: '196.875px',
                   width: 'auto',
                   objectFit: 'contain',
                   background: 'transparent'

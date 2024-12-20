@@ -9,34 +9,54 @@ function About() {
     <Box sx={{ 
       position: 'relative',
       minHeight: '100vh',
-      pt: { xs: 2, sm: 3 }
+      bgcolor: 'transparent'
     }}>
       <PageGradient />
-      <Container maxWidth="lg">
-        <PageTitle>About Us</PageTitle>
-        <Box 
-          sx={{ 
-            maxWidth: { xs: '90%', md: '800px' }, 
-            mx: 'auto', 
-            textAlign: 'center',
-            mt: 4
-          }}
-        >
-          <Typography 
-            variant="h5" 
-            color="text.secondary" 
-            sx={{ 
-              fontSize: { xs: '1.1rem', sm: '1.25rem' },
-              lineHeight: 1.6
-            }}
+      
+      {/* Hero Section */}
+      <Box sx={{ 
+        py: { xs: 4, sm: 6, md: 8 },
+        px: { xs: 2, sm: 3, md: 4 },
+        position: 'relative',
+        zIndex: 2
+      }}>
+        <Container maxWidth="lg">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            BlueBridge is far more than a traditional recruiting firm. We provide comprehensive, 
-            scalable solutions that go beyond simply placing talent.
-          </Typography>
-        </Box>
-        <MissionVisionSection />
-        <CTASection />
-      </Container>
+            <PageTitle>About Us</PageTitle>
+            <Typography 
+              variant="h5"
+              textAlign="center"
+              sx={{ 
+                maxWidth: '800px',
+                mx: 'auto',
+                mb: 8,
+                color: '#FFFFFF',
+                lineHeight: 1.6
+              }}
+            >
+              BlueBridge is far more than a traditional recruiting firm. We provide comprehensive, 
+              scalable solutions that go beyond simply placing talent.
+            </Typography>
+          </motion.div>
+        </Container>
+      </Box>
+
+      {/* Mission Vision Section */}
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        mt: 4
+      }}>
+        <Container maxWidth="lg">
+          <MissionVisionSection />
+          <CTASection />
+        </Container>
+      </Box>
     </Box>
   );
 }

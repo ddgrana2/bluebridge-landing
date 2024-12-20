@@ -1,16 +1,18 @@
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
-const NavButton = styled(Button)(({ theme }) => ({
-  margin: '0 15px',
-  padding: '8px 20px',
+const NavButton = styled(Button)(({ theme, active }) => ({
+  margin: '0 8px',
+  padding: '8px 12px',
   fontSize: '1.1rem',
   color: '#FFFFFF',
   fontWeight: 500,
   textTransform: 'capitalize',
-  fontFamily: '"Poppins", "Roboto", sans-serif',
+  fontFamily: '"Space Grotesk", sans-serif',
   letterSpacing: '0.5px',
+  borderBottom: active ? '2px solid white' : '2px solid transparent',
+  borderRadius: 0,
   '&:hover': {
     transform: 'scale(1.05)',
     transition: 'all 0.3s ease-in-out',
@@ -19,19 +21,22 @@ const NavButton = styled(Button)(({ theme }) => ({
 }));
 
 function Navbar() {
+  const location = useLocation();
+  
   return (
     <>
       <AppBar position="static" sx={{ 
         bgcolor: '#1621F2',
         boxShadow: 0,
-        marginBottom: 0
+        marginBottom: 0,
+        height: '65px',
       }}>
         <Box 
           sx={{ 
             width: '100%', 
-            height: '50px',
+            height: '65px',
             position: 'relative',
-            overflow: 'hidden'
+            overflow: 'visible'
           }}
         >
           {/* Logo superpuesto */}
@@ -39,9 +44,9 @@ function Navbar() {
             position: 'absolute',
             top: '50%',
             transform: 'translateY(-50%)',
-            left: '20px',
-            height: '240px',
-            zIndex: 2,
+            left: '40px',
+            height: '504px',
+            zIndex: 3,
             display: 'flex',
             alignItems: 'center'
           }}>
@@ -50,7 +55,7 @@ function Navbar() {
                 src="images/logo.png"
                 alt="BlueBridge Logo"
                 style={{ 
-                  height: '135px',
+                  height: '283.5px',
                   width: 'auto',
                   objectFit: 'contain',
                   background: 'transparent'
@@ -73,19 +78,35 @@ function Navbar() {
               display: 'flex', 
               justifyContent: 'center',
               alignItems: 'center',
-              gap: 2,
+              gap: 1,
               bgcolor: 'transparent'
             }}>
-              <NavButton component={Link} to="/">
+              <NavButton 
+                component={Link} 
+                to="/"
+                active={location.pathname === '/'}
+              >
                 Home
               </NavButton>
-              <NavButton component={Link} to="/about">
+              <NavButton 
+                component={Link} 
+                to="/about"
+                active={location.pathname === '/about'}
+              >
                 About Us
               </NavButton>
-              <NavButton component={Link} to="/insights">
+              <NavButton 
+                component={Link} 
+                to="/insights"
+                active={location.pathname === '/insights'}
+              >
                 Insights
               </NavButton>
-              <NavButton component={Link} to="/contact">
+              <NavButton 
+                component={Link} 
+                to="/contact"
+                active={location.pathname === '/contact'}
+              >
                 Contact
               </NavButton>
             </Box>
@@ -99,7 +120,7 @@ function Navbar() {
           height: '225px',
           width: '100%',
           background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
-          position: 'relative',
+          position: 'absolute',
           zIndex: 1
         }}
       />

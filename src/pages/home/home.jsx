@@ -24,7 +24,7 @@ function Home() {
   ];
 
   return (
-    <Box sx={{ bgcolor: 'white' }}>
+    <Box sx={{ bgcolor: 'white', position: 'relative', zIndex: 2 }}>
       {/* Hero Section */}
       <Box sx={{ py: 8 }}>
         <Container maxWidth="lg">
@@ -33,20 +33,30 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Typography 
-              variant="h1" 
-              component="h1" 
-              textAlign="center" 
-              gutterBottom
-              sx={{ 
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
-                fontWeight: 700,
-                color: '#0B3D91',
-                mb: 3
-              }}
-            >
-              Connecting Global Talent
-            </Typography>
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography 
+                component="span"
+                sx={{ 
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  fontWeight: 700,
+                  color: '#0B3D91',
+                  display: 'inline'
+                }}
+              >
+                Connecting{' '}
+              </Typography>
+              <Typography 
+                component="span"
+                sx={{ 
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  fontWeight: 700,
+                  color: '#FFFFFF',
+                  display: 'inline'
+                }}
+              >
+                Global Talent
+              </Typography>
+            </Box>
             
             <Typography 
               variant="h2" 

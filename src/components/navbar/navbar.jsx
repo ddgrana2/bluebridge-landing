@@ -25,11 +25,11 @@ function Navbar() {
   
   return (
     <>
-      <AppBar position="static" sx={{ 
+      <AppBar position="fixed" sx={{ 
         bgcolor: '#1618FF',
         boxShadow: 0,
-        marginBottom: 0,
         height: '65px',
+        zIndex: 1000
       }}>
         <Box 
           sx={{ 
@@ -114,7 +114,10 @@ function Navbar() {
         </Box>
       </AppBar>
 
-      {/* Sección de degradado */}
+      {/* Spacer para compensar el navbar fijo */}
+      <Box sx={{ height: '65px' }} />
+
+      {/* Degradado se mantiene igual */}
       <Box 
         sx={{ 
           height: '315px',

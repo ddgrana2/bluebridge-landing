@@ -50,11 +50,14 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ 
+              textAlign: 'center',
+              mt: -2
+            }}>
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  fontSize: { xs: '3.25rem', md: '4.55rem' },
                   fontWeight: 700,
                   color: '#1618FF',
                   display: 'inline'
@@ -65,7 +68,7 @@ function Home() {
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  fontSize: { xs: '3.25rem', md: '4.55rem' },
                   fontWeight: 700,
                   color: '#FFFFFF',
                   display: 'inline'
@@ -80,7 +83,7 @@ function Home() {
               component="h2" 
               textAlign="center"
               sx={{ 
-                fontSize: { xs: '1.15rem', md: '1.54rem' },
+                fontSize: { xs: '0.88rem', md: '1.18rem' },
                 fontWeight: 400,
                 color: '#FFFFFF',
                 maxWidth: '700px',

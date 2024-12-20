@@ -105,7 +105,7 @@ const theme = createTheme({
     },
     gradient: {
       primary: {
-        start: '#7173FF',
+        start: '#4B4DFF',
         end: '#FFFFFF'
       }
     }

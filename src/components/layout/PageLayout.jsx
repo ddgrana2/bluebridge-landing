@@ -50,8 +50,8 @@ function PageLayout({ children, title, subtitle }) {
                   color: '#FFFFFF',
                   lineHeight: 1.6,
                   fontSize: { 
-                    xs: 'calc(1.1rem * 1.2)', 
-                    sm: 'calc(1.25rem * 1.2)' 
+                    xs: '1.1rem',
+                    sm: '1.25rem'
                   }
                 }}
               >

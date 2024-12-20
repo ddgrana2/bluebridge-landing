@@ -27,7 +27,11 @@ function About() {
           <Typography 
             component="span"
             sx={{ 
-              fontSize: { xs: '2rem', sm: '2.46rem', md: '3.45rem' },
+              fontSize: { 
+                xs: 'calc(2rem * 1.2)',
+                sm: 'calc(2.46rem * 1.2)',
+                md: 'calc(3.45rem * 1.2)'
+              },
               fontWeight: 700,
               color: '#FFFFFF',
               display: 'inline'

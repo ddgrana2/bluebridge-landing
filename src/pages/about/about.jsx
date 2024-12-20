@@ -7,7 +7,32 @@ import PageLayout from '../../components/layout/PageLayout';
 function About() {
   return (
     <PageLayout
-      title={<PageTitle>About Us</PageTitle>}
+      title={
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography 
+            component="span"
+            sx={{ 
+              fontSize: { xs: '2rem', sm: '2.46rem', md: '3.45rem' },
+              fontWeight: 700,
+              color: '#1618FF',
+              display: 'inline'
+            }}
+          >
+            About{' '}
+          </Typography>
+          <Typography 
+            component="span"
+            sx={{ 
+              fontSize: { xs: '2rem', sm: '2.46rem', md: '3.45rem' },
+              fontWeight: 700,
+              color: '#FFFFFF',
+              display: 'inline'
+            }}
+          >
+            Us
+          </Typography>
+        </Box>
+      }
       subtitle="BlueBridge is far more than a traditional recruiting firm. We provide comprehensive, scalable solutions that go beyond simply placing talent."
     >
       <Container maxWidth="lg">

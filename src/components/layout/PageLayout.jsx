@@ -12,13 +12,29 @@ function PageLayout({ children, title, subtitle }) {
         pt: { xs: 8, sm: 10, md: 12 },
         pb: { xs: 4, sm: 6 },
         position: 'relative',
-        zIndex: 2
+        zIndex: 2,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }}>
-        <Container maxWidth="lg">
+        <Container 
+          maxWidth="lg"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
           >
             {title}
             {subtitle && (

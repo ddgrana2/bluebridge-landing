@@ -30,7 +30,19 @@ const theme = createTheme({
           '@media (max-width: 768px)': {
             minWidth: '200px',
           },
-        },
+          '&.page-title': {
+            fontSize: {
+              xs: '2rem',
+              sm: '2.46rem',
+              md: '3.45rem'
+            },
+            fontWeight: 700,
+            textAlign: 'center',
+            '& .highlight': {
+              color: '#FFFFFF'
+            }
+          }
+        }
       },
     },
   },
@@ -75,6 +87,21 @@ const theme = createTheme({
       lineHeight: 1.6,
     },
   },
+  custom: {
+    pageTitle: {
+      fontSize: {
+        xs: '2rem',
+        sm: '2.46rem',
+        md: '3.45rem'
+      },
+      fontWeight: 700,
+      color: '#1618FF',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }
 });
 
 export default theme;

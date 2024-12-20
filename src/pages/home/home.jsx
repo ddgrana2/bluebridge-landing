@@ -57,7 +57,7 @@ function Home() {
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '3.25rem', md: '4.55rem' },
+                  fontSize: { xs: '2.95rem', md: '4.14rem' },
                   fontWeight: 700,
                   color: '#1618FF',
                   display: 'inline'
@@ -68,7 +68,7 @@ function Home() {
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '3.25rem', md: '4.55rem' },
+                  fontSize: { xs: '2.95rem', md: '4.14rem' },
                   fontWeight: 700,
                   color: '#FFFFFF',
                   display: 'inline'
@@ -83,17 +83,18 @@ function Home() {
               component="h2" 
               textAlign="center"
               sx={{ 
-                fontSize: { xs: '0.88rem', md: '1.18rem' },
+                fontSize: { xs: '0.97rem', md: '1.30rem' },
                 fontWeight: 400,
                 color: '#FFFFFF',
                 maxWidth: '700px',
                 mx: 'auto',
                 mb: 8,
                 position: 'relative',
-                zIndex: 2
+                zIndex: 2,
+                whiteSpace: 'pre-line'
               }}
             >
-              We bridge the gap between international workforce and companies worldwide.
+              {'We bridge the gap between international workforce and\ncompanies worldwide.'}
             </Typography>
 
             {/* Asegurarse que todo el contenido esté sobre el degradado */}

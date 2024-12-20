@@ -7,7 +7,7 @@ const NavButton = styled(Button)(({ theme, active }) => ({
   padding: '8px 8px',
   fontSize: '0.92rem',
   color: '#FFFFFF',
-  fontWeight: 500,
+  fontWeight: 700,
   textTransform: 'capitalize',
   fontFamily: '"Space Grotesk", sans-serif',
   letterSpacing: '0.5px',
@@ -117,13 +117,14 @@ function Navbar() {
       {/* Spacer para compensar el navbar fijo */}
       <Box sx={{ height: '65px' }} />
 
-      {/* Degradado se mantiene igual */}
+      {/* Degradado actualizado */}
       <Box 
         sx={{ 
-          height: '315px',
+          height: '378px',
           width: '100%',
-          background: 'linear-gradient(180deg, #414AF2 0%, #FFFFFF 100%)',
+          background: 'linear-gradient(180deg, #4B4DFF 0%, #FFFFFF 100%)',
           position: 'absolute',
+          top: '65px',
           zIndex: -1
         }}
       />

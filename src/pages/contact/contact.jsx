@@ -4,6 +4,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
+import PageTitle from '../../components/common/PageTitle';
+import PageLayout from '../../components/layout/PageLayout';
 
 function Contact() {
   const contactInfo = [
@@ -46,96 +48,106 @@ function Contact() {
   ];
 
   return (
-    <Box sx={{ bgcolor: 'white', py: { xs: 6, md: 10 } }}>
-      <Container maxWidth="lg">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+    <PageLayout
+      title={
+        <Box sx={{ textAlign: 'center' }}>
           <Typography 
-            variant="h1" 
-            textAlign="center"
+            component="span"
             sx={{ 
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              fontSize: { 
+                xs: 'calc(2rem * 1.2)',
+                sm: 'calc(2.46rem * 1.2)',
+                md: 'calc(3.45rem * 1.2)'
+              },
               fontWeight: 700,
-              mb: 4,
-              color: '#0B3D91'
+              color: '#1618FF',
+              display: 'inline'
             }}
           >
-            Get in Touch
+            Get in{' '}
           </Typography>
-
           <Typography 
-            variant="h5"
-            textAlign="center"
+            component="span"
             sx={{ 
-              maxWidth: '800px',
-              mx: 'auto',
-              mb: 8,
-              color: '#666',
-              lineHeight: 1.6
+              fontSize: { 
+                xs: 'calc(2rem * 1.2)',
+                sm: 'calc(2.46rem * 1.2)',
+                md: 'calc(3.45rem * 1.2)'
+              },
+              fontWeight: 700,
+              color: '#FFFFFF',
+              display: 'inline'
             }}
           >
-            We're here to help you bridge the gap between talent and opportunity.
+            Touch
           </Typography>
-        </motion.div>
-
-        <Grid container spacing={4}>
-          {contactInfo.map((info, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                <Paper
-                  elevation={0}
-                  sx={{
-                    p: 4,
-                    height: '100%',
-                    textAlign: 'center',
-                    bgcolor: '#f8f9fa',
-                    borderRadius: 2,
-                    '&:hover': {
-                      transform: 'translateY(-5px)',
-                      transition: 'transform 0.3s ease-in-out',
-                      boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-                    }
-                  }}
+        </Box>
+      }
+      subtitle="We're here to help you bridge the gap between talent and opportunity."
+    >
+      <Box sx={{ 
+        bgcolor: 'white',
+        position: 'relative',
+        zIndex: 2,
+        width: '100%'
+      }}>
+        <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
+          <Grid container spacing={4}>
+            {contactInfo.map((info, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <Box sx={{ mb: 2 }}>
-                    {info.icon}
-                  </Box>
-                  <Typography 
-                    variant="h6" 
-                    gutterBottom 
-                    sx={{ 
-                      color: '#0B3D91',
-                      fontWeight: 600
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      p: 4,
+                      height: '100%',
+                      textAlign: 'center',
+                      bgcolor: '#f8f9fa',
+                      borderRadius: 2,
+                      '&:hover': {
+                        transform: 'translateY(-5px)',
+                        transition: 'transform 0.3s ease-in-out',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+                      }
                     }}
                   >
-                    {info.title}
-                  </Typography>
-                  {info.details.map((detail, idx) => (
+                    <Box sx={{ mb: 2 }}>
+                      {info.icon}
+                    </Box>
                     <Typography 
-                      key={idx} 
-                      variant="body1" 
+                      variant="h6" 
+                      gutterBottom 
                       sx={{ 
-                        color: '#555',
-                        mb: 1
+                        color: '#0B3D91',
+                        fontWeight: 600
                       }}
                     >
-                      {detail}
+                      {info.title}
                     </Typography>
-                  ))}
-                </Paper>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
+                    {info.details.map((detail, idx) => (
+                      <Typography 
+                        key={idx} 
+                        variant="body1" 
+                        sx={{ 
+                          color: '#555',
+                          mb: 1
+                        }}
+                      >
+                        {detail}
+                      </Typography>
+                    ))}
+                  </Paper>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+    </PageLayout>
   );
 }
 

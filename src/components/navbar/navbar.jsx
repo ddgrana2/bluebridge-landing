@@ -35,33 +35,56 @@ function Navbar() {
           disableGutters 
           sx={{ 
             height: '65px',
-            display: 'flex',
+            display: 'flex', 
             justifyContent: 'space-between'
           }}
         >
-          {/* Logo */}
-          <Link to="/">
-            <Box
-              component="img"
-              src="/images/logo.png"
-              alt="BlueBridge Logo"
-              sx={{
-                height: { 
-                  xs: '140px',  // Volvemos al tamaño original
-                  sm: '196.875px' 
-                },
-                width: 'auto',
-                objectFit: 'contain',
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                left: { xs: '20px', sm: '40px' }
-              }}
-            />
-          </Link>
+          {/* Logo - Desktop */}
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Link to="/">
+              <Box
+                component="img"
+                src="/images/logo.png"
+                alt="BlueBridge Logo"
+                sx={{
+                  height: '196.875px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  position: 'absolute',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  left: '40px'
+                }}
+              />
+            </Link>
+          </Box>
+
+          {/* Logo - Mobile */}
+          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Link to="/">
+              <Box
+                component="img"
+                src="/images/logo.png"
+                alt="BlueBridge Logo"
+                sx={{
+                  height: '140px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  position: 'absolute',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  left: '20px'
+                }}
+              />
+            </Link>
+          </Box>
 
           {/* Desktop Menu */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+          <Box sx={{ 
+            display: { xs: 'none', md: 'flex' },
+            gap: 2,
+            ml: 'auto' // Empuja los botones hacia la derecha
+          }}>
             {menuItems.map((item) => (
               <Button
                 key={item.text}
@@ -85,7 +108,10 @@ function Navbar() {
           </Box>
 
           {/* Mobile Menu */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ 
+            display: { xs: 'flex', md: 'none' },
+            ml: 'auto' // Empuja el menú hacia la derecha
+          }}>
             <IconButton
               size="large"
               onClick={handleMenu}

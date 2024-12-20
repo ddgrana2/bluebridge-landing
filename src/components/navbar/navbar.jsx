@@ -16,6 +16,7 @@ function Navbar() {
   };
 
   const menuItems = [
+    { text: 'Home', path: '/' },
     { text: 'About', path: '/about' },
     { text: 'Insights', path: '/insights' },
     { text: 'Contact', path: '/contact' }
@@ -83,7 +84,7 @@ function Navbar() {
           <Box sx={{ 
             display: { xs: 'none', md: 'flex' },
             gap: 2,
-            ml: 'auto' // Empuja los botones hacia la derecha
+            ml: 'auto'
           }}>
             {menuItems.map((item) => (
               <Button
@@ -110,7 +111,7 @@ function Navbar() {
           {/* Mobile Menu */}
           <Box sx={{ 
             display: { xs: 'flex', md: 'none' },
-            ml: 'auto' // Empuja el menú hacia la derecha
+            ml: 'auto'
           }}>
             <IconButton
               size="large"

@@ -48,7 +48,9 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#0B3D91',
+      main: '#1618FF',
+      light: '#4B4DFF',
+      lighter: '#7173FF'
     },
     background: {
       paper: '#FFFFFF',
@@ -100,6 +102,12 @@ const theme = createTheme({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
+    },
+    gradient: {
+      primary: {
+        start: '#7173FF',
+        end: '#FFFFFF'
+      }
     }
   }
 });

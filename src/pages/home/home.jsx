@@ -6,7 +6,11 @@ function Home() {
   return (
     <PageLayout
       title={
-        <Box sx={{ textAlign: 'center' }}>
+        <Box sx={{ 
+          textAlign: 'center',
+          width: '100%',
+          px: { xs: 2, sm: 3, md: 4 }
+        }}>
           <Typography 
             component="span"
             sx={{ 
@@ -33,7 +37,14 @@ function Home() {
       }
       subtitle="We bridge the gap between international workforce and\ncompanies worldwide."
     >
-      <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
+      <Container 
+        maxWidth={false} 
+        sx={{ 
+          width: '100%',
+          py: { xs: 4, sm: 6, md: 8 },
+          px: { xs: 2, sm: 3, md: 4 }
+        }}
+      >
         {/* Worker Selection Form */}
         {/* Built by experts section */}
         {/* Testimonials section */}

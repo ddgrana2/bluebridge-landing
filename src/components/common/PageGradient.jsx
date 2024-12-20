@@ -11,10 +11,7 @@ function PageGradient() {
         top: '65px',
         left: 0,
         right: 0,
-        zIndex: 1,
-        '@media (max-width: 600px)': {
-          height: '450px'
-        }
+        zIndex: 1
       }}
     />
   );

@@ -4,13 +4,7 @@ import PageGradient from '../common/PageGradient';
 
 function PageLayout({ children, title, subtitle }) {
   return (
-    <Box sx={{ 
-      position: 'relative',
-      minHeight: '100vh',
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
+    <>
       <PageGradient />
       
       {/* Hero Section */}
@@ -48,21 +42,8 @@ function PageLayout({ children, title, subtitle }) {
         </Container>
       </Box>
 
-      {/* Content Section */}
-      <Box 
-        component="main"
-        sx={{ 
-          flex: 1,
-          width: '100%',
-          bgcolor: 'white',
-          position: 'relative',
-          zIndex: 2,
-          mt: { xs: 2, sm: 4 }
-        }}
-      >
-        {children}
-      </Box>
-    </Box>
+      {children}
+    </>
   );
 }
 

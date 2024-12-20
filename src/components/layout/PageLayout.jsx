@@ -9,13 +9,14 @@ function PageLayout({ children, title, subtitle }) {
       
       {/* Hero Section */}
       <Box sx={{ 
-        pt: { xs: 8, sm: 10, md: 12 },
+        pt: { xs: 6, sm: 8, md: 10 },
         pb: { xs: 4, sm: 6 },
         position: 'relative',
         zIndex: 2,
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        transform: 'translateY(-0.5cm)'
       }}>
         <Container 
           maxWidth="lg"
@@ -48,7 +49,10 @@ function PageLayout({ children, title, subtitle }) {
                   mb: { xs: 4, sm: 6 },
                   color: '#FFFFFF',
                   lineHeight: 1.6,
-                  fontSize: { xs: '1.1rem', sm: '1.25rem' }
+                  fontSize: { 
+                    xs: 'calc(1.1rem * 1.2)', 
+                    sm: 'calc(1.25rem * 1.2)' 
+                  }
                 }}
               >
                 {subtitle}

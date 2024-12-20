@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 const NavButton = styled(Button)(({ theme, active }) => ({
   margin: '0 4px',
   padding: '8px 8px',
-  fontSize: '0.92rem',
+  fontSize: '1.01rem',
   color: '#FFFFFF',
   fontWeight: 700,
   textTransform: 'capitalize',
@@ -39,13 +39,13 @@ function Navbar() {
             overflow: 'visible'
           }}
         >
-          {/* Logo superpuesto */}
+          {/* Logo responsive */}
           <Box sx={{ 
             position: 'absolute',
             top: '50%',
             transform: 'translateY(-50%)',
-            left: '40px',
-            height: '350px',
+            left: { xs: '20px', sm: '40px' },
+            height: { xs: '250px', sm: '350px' },
             zIndex: 3,
             display: 'flex',
             alignItems: 'center'
@@ -59,6 +59,9 @@ function Navbar() {
                   width: 'auto',
                   objectFit: 'contain',
                   background: 'transparent'
+                }}
+                sx={{
+                  height: { xs: '140px', sm: '196.875px' }
                 }}
               />
             </Link>

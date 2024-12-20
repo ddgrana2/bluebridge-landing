@@ -20,14 +20,20 @@ function About() {
 
 function HeroSection() {
   return (
-    <Box 
-      sx={{ 
-        py: 8,
-        background: 'linear-gradient(to right, rgba(59, 130, 246, 0.02), rgba(59, 130, 246, 0.01))',
-        mt: '3rem'
-      }}
-    >
+    <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
+        <Typography 
+          variant="h2" 
+          component="h1" 
+          sx={{ 
+            fontSize: { xs: '2.46rem', md: '3.45rem' },
+            fontWeight: 700,
+            textAlign: 'center',
+            color: '#1618FF'
+          }}
+        >
+          About Us
+        </Typography>
         <Box 
           sx={{ 
             maxWidth: { xs: '90%', md: '800px' }, 
@@ -43,13 +49,6 @@ function HeroSection() {
             }
           }}
         >
-          <Typography variant="h2" component="h1" gutterBottom>
-            Connecting Worlds to{' '}
-            <Box component="span" sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-              Bridge
-            </Box>
-            {' '}the Global Labor Shortage
-          </Typography>
           <Typography variant="h5" color="text.secondary" sx={{ mt: 2 }}>
             BlueBridge is far more than a traditional recruiting firm. We provide comprehensive, 
             scalable solutions that go beyond simply placing talent.

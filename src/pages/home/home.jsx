@@ -57,7 +57,7 @@ function Home() {
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '2.95rem', md: '4.14rem' },
+                  fontSize: { xs: '2.46rem', md: '3.45rem' },
                   fontWeight: 700,
                   color: '#1618FF',
                   display: 'inline'
@@ -68,7 +68,7 @@ function Home() {
               <Typography 
                 component="span"
                 sx={{ 
-                  fontSize: { xs: '2.95rem', md: '4.14rem' },
+                  fontSize: { xs: '2.46rem', md: '3.45rem' },
                   fontWeight: 700,
                   color: '#FFFFFF',
                   display: 'inline'

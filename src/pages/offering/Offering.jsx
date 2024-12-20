@@ -1,6 +1,8 @@
 import { Box, Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import PageLayout from '../../components/layout/PageLayout';
+import PageGradient from '../../components/common/PageGradient';
+import PageTitle from '../../components/common/PageTitle';
 
 function Offering() {
   return (

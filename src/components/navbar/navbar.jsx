@@ -1,14 +1,13 @@
 import { AppBar, Box, Container, Toolbar, Button, IconButton, Menu, MenuItem } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import logo from '../../assets/images/logo.png';
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
+  const location = useLocation();
+  
+  const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -26,55 +25,49 @@ function Navbar() {
     <AppBar 
       position="fixed" 
       sx={{ 
-        background: '#FFFFFF',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+        bgcolor: '#1618FF',
+        boxShadow: 0,
+        height: '65px'
       }}
     >
       <Container maxWidth="lg">
         <Toolbar 
           disableGutters 
           sx={{ 
-            display: 'flex', 
-            justifyContent: 'space-between',
-            minHeight: '65px'
+            height: '65px',
+            display: 'flex',
+            justifyContent: 'space-between'
           }}
         >
           {/* Logo */}
           <Link to="/">
             <Box
               component="img"
-              src={logo}
+              src="/images/logo.png"
               alt="BlueBridge Logo"
               sx={{
-                height: { xs: '40px', sm: '50px' },
-                width: 'auto',
-                objectFit: 'contain'
+                height: { xs: '35px', sm: '40px' },
+                width: 'auto'
               }}
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <Box 
-            sx={{ 
-              display: { xs: 'none', md: 'flex' },
-              gap: 2,
-              alignItems: 'center'
-            }}
-          >
+          {/* Desktop Menu */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
             {menuItems.map((item) => (
               <Button
                 key={item.text}
                 component={Link}
                 to={item.path}
-                variant={item.text === 'Contact' ? 'contained' : 'text'}
                 sx={{
-                  color: item.text === 'Contact' ? 'white' : '#1618FF',
-                  bgcolor: item.text === 'Contact' ? '#1618FF' : 'transparent',
-                  fontSize: '1rem',
+                  color: '#FFFFFF',
+                  fontSize: '1.01rem',
+                  fontWeight: 700,
                   textTransform: 'none',
+                  borderBottom: location.pathname === item.path ? '2px solid white' : '2px solid transparent',
+                  borderRadius: 0,
                   '&:hover': {
-                    backgroundColor: item.text === 'Contact' ? '#4B4DFF' : 'transparent',
-                    color: item.text === 'Contact' ? 'white' : '#4B4DFF'
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
                   }
                 }}
               >
@@ -86,29 +79,45 @@ function Navbar() {
           {/* Mobile Menu */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              onClick={handleClick}
-              sx={{ color: '#1618FF' }}
+              size="large"
+              onClick={handleMenu}
+              sx={{ color: '#FFFFFF' }}
             >
               <MenuIcon />
             </IconButton>
             <Menu
+              id="menu-appbar"
               anchorEl={anchorEl}
-              open={open}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorEl)}
               onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'basic-button',
+              sx={{
+                display: { xs: 'block', md: 'none' },
+                '& .MuiPaper-root': {
+                  backgroundColor: '#FFFFFF',
+                  marginTop: '10px'
+                }
               }}
             >
               {menuItems.map((item) => (
                 <MenuItem 
                   key={item.text}
+                  onClick={handleClose}
                   component={Link}
                   to={item.path}
-                  onClick={handleClose}
                   sx={{
                     color: '#1618FF',
+                    fontWeight: 500,
                     '&:hover': {
-                      backgroundColor: 'rgba(22, 24, 255, 0.1)',
+                      backgroundColor: 'rgba(22, 24, 255, 0.1)'
                     }
                   }}
                 >
